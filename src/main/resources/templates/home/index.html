@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Spring Boot Hello World</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div th:include="home/nav.html"></div>
+
+<h1>Hello World from Spring Boot</h1>
+
+<table>
+    <thead>
+    <td>ID</td>
+    <td>Text</td>
+    <td>Decimal</td>
+    </thead>
+    <tr th:each="list: ${list}">
+        <td th:text="${list.id}" /></td>
+        <td th:text="${list.text}" /></td>
+        <td th:text="${list.number}" /></td>
+    </tr>
+
+</table>
+<p th:text="${id}" />
+<p th:text="${firstName}" />
+<p th:text="${lastName}" />
+<p th:text="${anotherPerson.id}" />
+<p th:text="${anotherPerson.firstName}" />
+<p th:text="${anotherPerson.lastName}" />
+
+
+</body>
+</html>
